@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="./style.css" />
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
@@ -19,76 +19,98 @@
       <a href="#"><img src="./images/logo.svg" alt="blogr" class="logo" /></a>
 
       <nav>
+        <!-- nav item -->
         <ul class="nav__left-items">
-          <ul class="nav__dropdown nav__dropdown-1">
-            Product
-            <div class="" style="display: inline-block">
-              <img src="./images/icon-arrow-light.svg" alt="" />
+          <!-- nav li item -->
+          <li>
+            <div onclick="myFunction()" class="row dropper">
+              <p>Products</p>
+              <img class="arrow" src="./images/icon-arrow-light.svg" alt="" />
             </div>
-            <li class="nav__item">
-              <a class="nav__link" href="">Overview</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Pricing</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Marketplace</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Features</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Integrations</a>
-            </li>
-          </ul>
 
-          <ul class="nav__dropdown nav__dropdown-2">
-            Company
-            <div class="" style="display: inline-block">
+            <ul class="nav__dropdown nav__dropdown-1">
+              <li class="nav__item">
+                <a class="nav__link" href="">Overview</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Pricing</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Marketplace</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Features</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Integrations</a>
+              </li>
+            </ul>
+          </li>
+          <!-- end of nav li item -->
+          <!-- nav li item -->
+          <li class="nav__dropdown nav__dropdown-2">
+            <div onclick="myFunction()" class="dropper">
+              <p>Products</p>
               <img src="./images/icon-arrow-light.svg" alt="" />
             </div>
-            <li class="nav__item">
-              <a class="nav__link" href="">About</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Team</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Blog</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Careers</a>
-            </li>
-          </ul>
 
-          <ul class="nav__dropdown nav__dropdown-3">
-            Connect
-            <div class="" style="display: inline-block">
+            <ul>
+              <li class="nav__item">
+                <a class="nav__link" href="">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Team</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Careers</a>
+              </li>
+            </ul>
+          </li>
+          <!-- end of nav li item -->
+          <!-- nav li item -->
+          <li class="nav__dropdown nav__dropdown-3">
+            <div onclick="myFunction()" class="dropper">
+              <p>Products</p>
               <img src="./images/icon-arrow-light.svg" alt="" />
             </div>
-            <li class="nav__item">
-              <a class="nav__link" href="">Contact</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">Newsletter</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="">LinkedIn</a>
-            </li>
-          </ul>
+
+            <ul>
+              <li class="nav__item">
+                <a class="nav__link" href="">Contact</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Newsletter</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </li>
+          <!-- end of nav li item -->
         </ul>
-
+        <!-- end of nav item -->
+        <!-- nav item -->
         <ul class="nav__right-items">
-          <li class="nav__item">
-            <a class="nav__link btn btn--nav" href="">Login</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="">Sign Up</a>
+          <li>
+            <ul>
+              <li class="nav__item">
+                <a class="nav__link btn btn--nav" href="">Login</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Sign Up</a>
+              </li>
+            </ul>
           </li>
         </ul>
+        <!-- end of nav item -->
       </nav>
     </header>
 
+    <!-- === SECTIONS === -->
+    <!-- SECTION HERO -->
     <section class="hero">
       <h1>A modern publishing platform</h1>
       <h4>Grow your audience and build your online brand</h4>
@@ -97,27 +119,52 @@
         <a href="#" class="btn btn--white">Learn More</a>
       </div>
     </section>
-    Designed for the future Introducing an extensible editor Blogr features an
-    exceedingly intuitive interface which lets you focus on one thing: creating
-    content. The editor supports management of multiple blogs and allows easy
-    manipulation of embeds such as images, videos, and Markdown. Extensibility
-    with plugins and themes provide easy ways to add functionality or change the
-    looks of a blog. Robust content management Flexible content management
-    enables users to easily move through posts. Increase the usability of your
-    blog by adding customized categories, sections, format, or flow. With this
-    functionality, you’re in full control. State of the Art Infrastructure With
-    reliability and speed in mind, worldwide data centers provide the backbone
-    for ultra-fast connectivity. This ensures your site will load instantly, no
-    matter where your readers are, keeping your site competitive. Free, open,
-    simple Blogr is a free and open source application backed by a large
-    community of helpful developers. It supports features such as code syntax
-    highlighting, RSS feeds, social media integration, third-party commenting
-    tools, and works seamlessly with Google Analytics. The architecture is clean
-    and is relatively easy to learn. Powerful tooling Batteries included. We
-    built a simple and straightforward CLI tool that makes customization and
-    deployment a breeze, but capable of producing even the most complicated
-    sites. Product Overview Pricing Marketplace Features Integrations Company
-    About Team Blog Careers Connect Contact Newsletter LinkedIn
+    <!-- END OF SECTION HERO -->
+
+    <!-- SECTION 1 -->
+    <section>
+      <h4>Designed for the future</h4>
+      <div class="section__info">
+        <h3>Introducing an extensible editor</h3>
+        <p>
+          Blogr features an exceedingly intuitive interface which lets you focus
+          on one thing: creating content. The editor supports management of
+          multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide
+          easy ways to add functionality or change the looks of a blog.
+        </p>
+
+        <h3>Robust content management</h3>
+        <p>
+          Flexible content management enables users to easily move through
+          posts. Increase the usability of your blog by adding customized
+          categories, sections, format, or flow. With this functionality, you’re
+          in full control.
+        </p>
+      </div>
+
+      <div class="section__image">
+        <!-- image here -->
+      </div>
+    </section>
+    <!--END OF SECTION 1 -->
+
+    <!-- 
+      
+     -->
+    State of the Art Infrastructure With reliability and speed in mind,
+    worldwide data centers provide the backbone for ultra-fast connectivity.
+    This ensures your site will load instantly, no matter where your readers
+    are, keeping your site competitive. Free, open, simple Blogr is a free and
+    open source application backed by a large community of helpful developers.
+    It supports features such as code syntax highlighting, RSS feeds, social
+    media integration, third-party commenting tools, and works seamlessly with
+    Google Analytics. The architecture is clean and is relatively easy to learn.
+    Powerful tooling Batteries included. We built a simple and straightforward
+    CLI tool that makes customization and deployment a breeze, but capable of
+    producing even the most complicated sites. Product Overview Pricing
+    Marketplace Features Integrations Company About Team Blog Careers Connect
+    Contact Newsletter LinkedIn
 
     <div class="attribution">
       Challenge by
@@ -125,5 +172,13 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script>
+      function myFunction() {
+        document.body
+          .getElementsByClassName("nav__dropdown-1")[0]
+          .classList.toggle("show");
+      }
+    </script>
   </body>
 </html>

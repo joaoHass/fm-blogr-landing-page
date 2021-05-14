@@ -1,0 +1,14 @@
+p {
+  margin: 0;
+}
+.show {
+  display: none;
+}
+
+.row {
+  display: flex;
+}
+
+.arrow {
+  display: inline-block;
+}
