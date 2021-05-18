@@ -18,17 +18,20 @@
     <header>
       <a href="#"><img src="./images/logo.svg" alt="blogr" class="logo" /></a>
 
-      <nav>
+      <nav class="row">
         <!-- nav item -->
-        <ul class="nav__left-items">
+        <ul class="nav__left-items row">
           <!-- nav li item -->
           <li>
-            <div onclick="myFunction()" class="row dropper">
+            <div
+              onclick="dropdownSwitch(event)"
+              class="nav__dropdown nav__dropdown-1 row dropper"
+            >
               <p>Products</p>
               <img class="arrow" src="./images/icon-arrow-light.svg" alt="" />
             </div>
 
-            <ul class="nav__dropdown nav__dropdown-1">
+            <ul>
               <li class="nav__item">
                 <a class="nav__link" href="">Overview</a>
               </li>
@@ -48,8 +51,11 @@
           </li>
           <!-- end of nav li item -->
           <!-- nav li item -->
-          <li class="nav__dropdown nav__dropdown-2">
-            <div onclick="myFunction()" class="dropper">
+          <li>
+            <div
+              onclick="dropdownSwitch(event)"
+              class="nav__dropdown nav__dropdown-1 row dropper"
+            >
               <p>Products</p>
               <img src="./images/icon-arrow-light.svg" alt="" />
             </div>
@@ -71,8 +77,11 @@
           </li>
           <!-- end of nav li item -->
           <!-- nav li item -->
-          <li class="nav__dropdown nav__dropdown-3">
-            <div onclick="myFunction()" class="dropper">
+          <li>
+            <div
+              onclick="dropdownSwitch(event)"
+              class="nav__dropdown nav__dropdown-3 row dropper"
+            >
               <p>Products</p>
               <img src="./images/icon-arrow-light.svg" alt="" />
             </div>
@@ -95,7 +104,7 @@
         <!-- nav item -->
         <ul class="nav__right-items">
           <li>
-            <ul>
+            <ul class="row">
               <li class="nav__item">
                 <a class="nav__link btn btn--nav" href="">Login</a>
               </li>
@@ -124,7 +133,7 @@
     <!-- SECTION 1 -->
     <section>
       <h4>Designed for the future</h4>
-      <div class="section__info">
+      <article class="section__info">
         <h3>Introducing an extensible editor</h3>
         <p>
           Blogr features an exceedingly intuitive interface which lets you focus
@@ -141,30 +150,128 @@
           categories, sections, format, or flow. With this functionality, you’re
           in full control.
         </p>
-      </div>
+      </article>
 
-      <div class="section__image">
-        <!-- image here -->
-      </div>
+      <figure class="section__image">
+        <img
+          class="svg"
+          src="./images/illustration-editor-desktop.svg"
+          alt=""
+        />
+      </figure>
     </section>
     <!--END OF SECTION 1 -->
 
-    <!-- 
-      
-     -->
-    State of the Art Infrastructure With reliability and speed in mind,
-    worldwide data centers provide the backbone for ultra-fast connectivity.
-    This ensures your site will load instantly, no matter where your readers
-    are, keeping your site competitive. Free, open, simple Blogr is a free and
-    open source application backed by a large community of helpful developers.
-    It supports features such as code syntax highlighting, RSS feeds, social
-    media integration, third-party commenting tools, and works seamlessly with
-    Google Analytics. The architecture is clean and is relatively easy to learn.
-    Powerful tooling Batteries included. We built a simple and straightforward
-    CLI tool that makes customization and deployment a breeze, but capable of
-    producing even the most complicated sites. Product Overview Pricing
-    Marketplace Features Integrations Company About Team Blog Careers Connect
-    Contact Newsletter LinkedIn
+    <!-- SECTION STRIPE -->
+    <section class="section section--stripe">
+      <img src="./images/bg-pattern-circles.svg" />
+      <div class="row">
+        <figure>
+          <img
+            src="./images/illustration-phones.svg"
+            alt="two smartphones with blogr's art"
+          />
+        </figure>
+        <h3>State of the Art Infrastructure</h3>
+        <p>
+          With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity. This ensures your site will load
+          instantly, no matter where your readers are, keeping your site
+          competitive.
+        </p>
+      </div>
+    </section>
+    <!-- END OF STRIPE SECTION -->
+
+    <!-- SECTION 2 -->
+    <section>
+      <figure class="section__image">
+        <img
+          class="svg"
+          src="./images/illustration-editor-desktop.svg"
+          alt=""
+        />
+      </figure>
+
+      <article class="section__info">
+        <h3>Free, open, simple</h3>
+        <p>
+          Blogr is a free and open source application backed by a large
+          community of helpful developers. It supports features such as code
+          syntax highlighting, RSS feeds, social media integration, third-party
+          commenting tools, and works seamlessly with Google Analytics. The
+          architecture is clean and is relatively easy to learn.
+        </p>
+
+        <h3>Powerful tooling</h3>
+        <p>
+          Batteries included. We built a simple and straightforward CLI tool
+          that makes customization and deployment a breeze, but capable of
+          producing even the most complicated sites.
+        </p>
+      </article>
+    </section>
+    <!--END OF SECTION 2 -->
+
+    <!-- FOOTER -->
+    <footer class="row">
+      <div class="img-wrapper">
+        <img src="./images/logo.svg" alt="blogr" />
+      </div>
+      <!-- footer list -->
+      <ul class="footer__list">
+        Product
+        <li class="footer__item">
+          <a class="footer__link" href="">Overview</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Pricing</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Marketplace</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Features</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">integrations</a>
+        </li>
+      </ul>
+      <!-- end of footer list -->
+      <!-- footer list -->
+      <ul class="footer__list">
+        Company
+        <li class="footer__item">
+          <a class="footer__link" href="">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Team</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Blog</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Careers</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href=""></a>
+        </li>
+      </ul>
+      <!-- end of footer list -->
+      <!-- footer list -->
+      <ul class="footer__list">
+        Connect
+        <li class="footer__item">
+          <a class="footer__link" href="">Contact</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">Newsletter</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
 
     <div class="attribution">
       Challenge by
@@ -174,10 +281,10 @@
     </div>
 
     <script>
-      function myFunction() {
-        document.body
-          .getElementsByClassName("nav__dropdown-1")[0]
-          .classList.toggle("show");
+      function dropdownSwitch(event) {
+        event.currentTarget.nextElementSibling.classList.toggle(
+          "show-dropdown"
+        );
       }
     </script>
   </body>

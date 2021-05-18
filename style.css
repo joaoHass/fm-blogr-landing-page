@@ -1,14 +1,28 @@
 p {
   margin: 0;
 }
-.show {
+.show-dropdown {
   display: none;
 }
 
 .row {
   display: flex;
+  margin-right: 50px;
 }
 
 .arrow {
   display: inline-block;
+}
+
+.dropper {
+  position: relative;
+}
+
+.dropper ul {
+  position: absolute;
+}
+
+.svg {
+  width: 200px;
+  height: auto;
 }
