@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -12,120 +13,124 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./libs/bodyScrollLock/lib/bodyScrollLock.min.js"></script>
+</head>
+
+
+    <!--  -->
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
     <header>
-      <a href="#"><img src="./images/logo.svg" alt="blogr" class="logo" /></a>
+      <div class="header">
+        <a href="#">
+          <img src="./images/logo.svg" alt="blogr" class="logo" />
+        </a>
+        <button class="hamburguer">
+          <span class="menuIcon">
+            <img src="./images/icon-hamburger.svg" alt="open navbar" />
+          </span>
+          <span class="xIcon">
+            <img src="./images/icon-close.svg" alt="close navbar" >
+          </span>
+        </button>
+      </div>
 
-      <nav class="row">
-        <!-- nav item -->
-        <ul class="nav__left-items row">
-          <!-- nav li item -->
-          <li>
-            <div
-              onclick="dropdownSwitch(event)"
-              class="nav__dropdown nav__dropdown-1 row dropper"
-            >
-              <p>Products</p>
-              <img class="arrow" src="./images/icon-arrow-light.svg" alt="" />
-            </div>
-
-            <ul>
-              <li class="nav__item">
-                <a class="nav__link" href="">Overview</a>
+      <nav>
+        <ul class="nav__left-items">
+          <li class="nav__item">
+            <a tabindex="0" onclick="dropdownSwitch(event)">Product</a>
+            <ul class="nav__submenu">
+              <li class="nav__submenu__item">
+                <a href="#">Overview</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Pricing</a>
+              <li class="nav__submenu__item">
+                <a href="#">Pricing</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Marketplace</a>
+              <li class="nav__submenu__item">
+                <a href="#">Marketplace</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Features</a>
+              <li class="nav__submenu__item">
+                <a href="#">Features</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Integrations</a>
+              <li class="nav__submenu__item">
+                <a href="#">Integrations</a>
               </li>
             </ul>
           </li>
-          <!-- end of nav li item -->
-          <!-- nav li item -->
-          <li>
-            <div
-              onclick="dropdownSwitch(event)"
-              class="nav__dropdown nav__dropdown-1 row dropper"
-            >
-              <p>Products</p>
-              <img src="./images/icon-arrow-light.svg" alt="" />
-            </div>
 
+          <li class="nav__item">
+            <a tabindex="0" onclick="dropdownSwitch(event)">Company</a>
             <ul>
-              <li class="nav__item">
-                <a class="nav__link" href="">About</a>
+              <li class="nav__submenu__item">
+                <a href="#">About</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Team</a>
+              <li class="nav__submenu__item">
+                <a href="#">Team</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Blog</a>
+              <li class="nav__submenu__item">
+                <a href="#">Blog</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Careers</a>
+              <li class="nav__submenu__item">
+                <a href="#">Careers</a>
               </li>
             </ul>
           </li>
-          <!-- end of nav li item -->
-          <!-- nav li item -->
-          <li>
-            <div
-              onclick="dropdownSwitch(event)"
-              class="nav__dropdown nav__dropdown-3 row dropper"
-            >
-              <p>Products</p>
-              <img src="./images/icon-arrow-light.svg" alt="" />
-            </div>
 
+          <li class="nav__item">
+            <a tabindex="0" onclick="dropdownSwitch(event)">Connect</a>
             <ul>
-              <li class="nav__item">
-                <a class="nav__link" href="">Contact</a>
+              <li class="nav__submenu__item">
+                <a href="#">Contact</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Newsletter</a>
+              <li class="nav__submenu__item">
+                <a href="#">Newsletter</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">LinkedIn</a>
+              <li class="nav__submenu__item">
+                <a href="#">LinkedIn</a>
               </li>
             </ul>
           </li>
-          <!-- end of nav li item -->
         </ul>
-        <!-- end of nav item -->
-        <!-- nav item -->
+
         <ul class="nav__right-items">
           <li>
-            <ul class="row">
-              <li class="nav__item">
-                <a class="nav__link btn btn--nav" href="">Login</a>
+            <ul class="">
+              <li>
+                <a class="btn btn--login" href="">Login</a>
               </li>
-              <li class="nav__item">
-                <a class="nav__link" href="">Sign Up</a>
+              <li>
+                <a class="btn btn--sign-up" href="">Sign Up</a>
               </li>
             </ul>
           </li>
         </ul>
-        <!-- end of nav item -->
       </nav>
     </header>
 
     <!-- === SECTIONS === -->
     <!-- SECTION HERO -->
-    <section class="hero">
-      <h1>A modern publishing platform</h1>
-      <h4>Grow your audience and build your online brand</h4>
-      <div class="row">
-        <a href="#" class="btn btn--white">Start for free</a>
-        <a href="#" class="btn btn--white">Learn More</a>
+    <section class="hero row">
+      <div class="section-center hero__info">
+        <h1>A modern publishing platform</h1>
+        <h2>Grow your audience and build your online brand</h2>
+
+        <div class="hero__btns row">
+          <a href="#" class="btn">Start for free</a>
+          <a href="#" class="btn btn--border">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero__svg-cover">
+
+          <img src="./images/bg-pattern-intro.svg" alt="">
+
       </div>
     </section>
     <!-- END OF SECTION HERO -->
@@ -280,12 +285,6 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
 
-    <script>
-      function dropdownSwitch(event) {
-        event.currentTarget.nextElementSibling.classList.toggle(
-          "show-dropdown"
-        );
-      }
-    </script>
+    <script src="./script/script.js"></script>
   </body>
 </html>

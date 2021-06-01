@@ -1,28 +1,263 @@
-p {
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.show-dropdown {
-  display: none;
+
+/* TABLE OF CONTENT   */
+/* ------------------ */
+/* 1. VARIABLES       */
+/* 1.1 Colors         */
+/* 1.2 Fonts families */
+
+:root {
+  /* // 1. VARIABLES // */
+
+  /* / 1.1 Colors / */
+  /* format: --clr-(Primary/Neutral/Gradient)-name */
+
+  /*- Primary -*/
+  --clr-p-lgt-red: hsl(356, 100%, 66%);
+  --clr-p-very-lgt-red: hsl(355, 100%, 74%);
+  --clr-p-very-dk-blue: hsl(208, 49%, 24%);
+
+  /*- Neutral -*/
+  --clr-n-white: #fff;
+  --clr-n-lgt-grey: #efeff1;
+  --clr-n-grey: #5d7183;
+  --clr-n-grayish-blue: hsl(240, 3%, 79%);
+  --clr-n-very-dk-black-blue: hsl(240, 10%, 16%);
+
+  /*- Gradient -*/
+  --clr-g-very-lgt-red: hsl(13, 100%, 72%);
+  --clr-g-lgt-red: hsl(353, 100%, 62%);
+
+  --clr-g-very-dk-gray-blue: hsl(237, 17%, 21%);
+  --clr-g-very-dk-desatured-blue: hsl(237, 23%, 32%);
+
+  /* / 1.2 Font Families / */
+
+  --ff-overpass: "Overpass", sans-serif;
+  --ff-ubuntu: "Ubuntu", sans-serif;
+}
+
+body {
+  font-family: var(--ff-overpass);
+  background-color: var(--clr-n-white);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.section-center {
+  width: 80%;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .row {
   display: flex;
-  margin-right: 50px;
 }
 
-.arrow {
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
   display: inline-block;
+  font-family: var(--ff-ubuntu);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 200px;
+  padding: 0.8em;
+  color: var(--clr-p-lgt-red);
+  background-color: white;
 }
 
-.dropper {
-  position: relative;
+.show-dropdown {
+  display: block;
 }
 
-.dropper ul {
+.showMenu {
+  display: flex;
+}
+
+/*  */
+
+.header {
   position: absolute;
+  top: 7vh;
+  left: 5vw;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
 }
 
-.svg {
-  width: 200px;
+.hamburguer {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  height: 100%;
+}
+
+.xIcon {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  top: 18vh;
+  left: 5vw;
+  width: 90vw;
+  border-radius: 6px;
+  padding: 2em 0;
+  background: var(--clr-n-white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 100;
+}
+
+nav {
+  display: none;
+}
+
+.nav__right-items {
+  margin-top: 1em;
+}
+
+.nav__item {
   height: auto;
+  padding: 1em 1.5em;
+}
+
+.nav__item > a {
+  position: relative;
+  font-family: var(--ff-ubuntu);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--clr-g-very-dk-gray-blue);
+}
+
+.nav__item > a::after {
+  position: absolute;
+  top: -15%;
+  left: 110%;
+  content: url("./images/icon-arrow-dark.svg");
+}
+
+.nav__item ul {
+  display: none;
+  border-radius: 7px;
+  padding: 0.3em 0.6em;
+  background-color: var(--clr-n-lgt-grey);
+}
+
+.nav__submenu__item a {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0.5em 0;
+  color: var(--clr-n-grey);
+}
+
+.btn--login {
+  font-size: 1.3rem;
+  font-family: var(--ff-overpass);
+  color: var(--clr-n-very-dk-black-blue);
+}
+
+.btn--sign-up {
+  padding: 1em 3em;
+  color: var(--clr-n-white);
+  background: rgb(255, 143, 112);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 143, 112, 1) 0%,
+    rgba(255, 61, 84, 1) 100%
+  );
+}
+
+/*  */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  align-items: center;
+  text-align: center;
+  /* padding to centralize based on the .header positioning */
+  padding-top: 7vh;
+  border-bottom-left-radius: 100px;
+  background: linear-gradient(
+    155deg,
+    rgba(255, 143, 112, 1) 0%,
+    rgba(255, 61, 84, 1) 100%
+  );
+}
+
+.hero__info {
+  /* z-index only works for positioned elements */
+  position: relative;
+  z-index: 10;
+}
+
+.hero__svg-cover {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+
+  height: auto;
+  z-index: 1;
+}
+
+.hero__svg-cover img {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: -30%;
+  width: 200%;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 0.4em;
+  color: var(--clr-n-white);
+}
+
+.hero h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1.8em;
+  color: var(--clr-n-white);
+}
+
+.hero__btns {
+  justify-content: space-between;
+}
+
+.btn--border {
+  background: none;
+  color: var(--clr-n-white);
+  border: 1px solid white;
 }
