@@ -35,7 +35,7 @@
   --clr-g-lgt-red: hsl(353, 100%, 62%);
 
   --clr-g-very-dk-gray-blue: hsl(237, 17%, 21%);
-  --clr-g-very-dk-desatured-blue: hsl(237, 23%, 32%);
+  --clr-g-very-dk-desatured-blue: hsl(206, 38%, 28%);
 
   /* / 1.2 Font Families / */
 
@@ -46,6 +46,10 @@
 body {
   font-family: var(--ff-overpass);
   background-color: var(--clr-n-white);
+}
+
+section {
+  text-align: center;
 }
 
 ul,
@@ -61,8 +65,21 @@ h4 {
   padding: 0;
 }
 
+h4,
+h3 {
+  font-size: 1.6rem;
+  color: var(--clr-g-very-dk-desatured-blue);
+}
+
+p {
+  /* values based on MDN site */
+  max-width: 60ch;
+  line-height: 1.75;
+  letter-spacing: -0.0027777778rem;
+  color: var(--clr-n-grey);
+}
 .section-center {
-  width: 80%;
+  width: 90%;
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -87,14 +104,6 @@ h4 {
   padding: 0.8em;
   color: var(--clr-p-lgt-red);
   background-color: white;
-}
-
-.show-dropdown {
-  display: block;
-}
-
-.showMenu {
-  display: flex;
 }
 
 /*  */
@@ -165,9 +174,10 @@ nav {
   content: url("./images/icon-arrow-dark.svg");
 }
 
-.nav__item ul {
+.nav__submenu {
   display: none;
   border-radius: 7px;
+  margin-top: 1em;
   padding: 0.3em 0.6em;
   background-color: var(--clr-n-lgt-grey);
 }
@@ -203,7 +213,7 @@ nav {
   position: relative;
   min-height: 100vh;
   align-items: center;
-  text-align: center;
+  overflow: hidden;
   /* padding to centralize based on the .header positioning */
   padding-top: 7vh;
   border-bottom-left-radius: 100px;
@@ -222,18 +232,14 @@ nav {
 
 .hero__svg-cover {
   position: absolute;
-  overflow: hidden;
-  width: 100%;
-
+  width: 200%;
   height: auto;
+  top: -40%;
+  left: -115%;
   z-index: 1;
 }
 
 .hero__svg-cover img {
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: -30%;
   width: 200%;
   height: auto;
 }
@@ -260,4 +266,43 @@ nav {
   background: none;
   color: var(--clr-n-white);
   border: 1px solid white;
+}
+
+/*  */
+
+.section-1 {
+  margin: 4.5em 0;
+}
+
+.section__image {
+  display: Flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2.25em 0;
+}
+
+.section__image img {
+  width: 100%;
+}
+
+.section__info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.section__info h3 {
+  margin-bottom: 0.5em;
+}
+
+.section__info__text + .section__info__text {
+  margin-top: 3em;
+}
+
+.show-dropdown {
+  display: block;
+}
+
+.showMenu {
+  display: flex;
 }
