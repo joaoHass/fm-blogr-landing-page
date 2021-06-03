@@ -382,26 +382,29 @@ nav {
 
 /*  */
 
-.footer {
-  font-size: 1.3rem;
+footer {
   border-top-right-radius: 90px;
   margin-top: 4.5em;
-  padding-top: 3em;
   background: #24242c;
 }
 
-.footer__wrapper {
+.footer {
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   padding: 3.8em 0;
 }
 
-.footer__wrapper ul + ul {
-  margin-top: 2em;
+.img-wrapper {
+  margin-bottom: 4em;
 }
 
 .footer__list {
   color: var(--clr-n-white);
+}
+
+.footer__list + .footer__list {
+  margin-top: 2em;
 }
 
 .footer__list p {
@@ -410,8 +413,9 @@ nav {
   margin: 0 auto;
 }
 
+/* first li item (ignores <p>) */
 .footer__list li:nth-child(2) {
-  margin-top: 1.3em;
+  margin-top: 1em;
 }
 
 .footer__item + .footer__item {
@@ -422,6 +426,8 @@ nav {
   font-weight: 600;
   color: var(--clr-n-lgest-grey);
 }
+
+/* ================================== */
 
 @media screen and (min-width: 450px) {
   .hero__info {
@@ -470,6 +476,132 @@ nav {
 
   .footer p {
     font-size: 1.6rem;
+  }
+
+  .hero__btns {
+    justify-content: center;
+  }
+
+  .hero__btns a:nth-child(1) {
+    margin-right: 1em;
+  }
+}
+
+/* TRANSITION BETWEEN  MENU-NAV AND PORTRAIT-NAV */
+@media screen and (min-width: 768px) {
+  .hamburguer {
+    display: none;
+  }
+
+  .test {
+    position: absolute;
+    display: flex;
+    top: 6vh;
+    /* has width of 90, so 5vw are left on the right side */
+    left: 5vw;
+    width: 90%;
+    max-width: 1140px;
+  }
+
+  .test > * + * {
+    margin-left: 2em;
+  }
+
+  nav,
+  .header {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .header {
+    align-items: center;
+    display: flex;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav__item {
+    position: relative;
+    height: auto;
+    padding: 0;
+  }
+
+  .nav__left-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--clr-n-white);
+  }
+
+  .nav__left-items > li + li {
+    margin-left: 1em;
+  }
+
+  .nav__submenu {
+    position: absolute;
+    text-align: left;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5em 4em 1.5em 1em;
+  }
+
+  .nav__submenu__item a {
+    margin-left: 0;
+  }
+
+  .nav__right-items {
+    margin: 0;
+    margin-left: 1.5em;
+  }
+
+  .nav__btns {
+    display: flex;
+    font-size: 1rem;
+  }
+
+  .btn--login {
+    background: transparent;
+    color: var(--clr-n-white);
+  }
+
+  .btn--sign-up {
+    background: var(--clr-n-white);
+    color: var(--clr-p-lgt-red);
+    padding: 0.8em 2em;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding-left: 5%;
+    text-align: left;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  /* reset margins */
+  .img-wrapper,
+  .footer__list {
+    margin: 0;
+  }
+
+  .img-wrapper {
+    margin-right: 3em;
+  }
+
+  .footer__list + .footer__list {
+    margin: 0;
+    margin-left: 2em;
   }
 }
 
