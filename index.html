@@ -39,7 +39,7 @@
         </button>
       </div>
 
-      <nav>
+      <nav class="nav">
         <ul class="nav__left-items">
           <li  onclick="showMenu(event)" class="nav__item">
             <button tabindex="0"">Product</button>
@@ -138,10 +138,11 @@
         type="image/svg+xml">
         <img
         src="./images/illustration-editor-mobile.svg"
+        alt=""
         class="svg"
         />
       </picture>
-      <article class="section__info section__info--1 section-center">
+      <article class="section__info section__info--1">
         <div class="section__info__text">
           <h3>Introducing an extensible editor</h3>
           <p>
@@ -188,24 +189,26 @@
         </div>
 
         <div class="stripe__svg-bg">
-          <img src="./images/bg-pattern-circles.svg" />
+          <img src="./images/bg-pattern-circles.svg"
+          alt = "" />
         </div>
       </article>
     </section>
     <!-- END OF STRIPE SECTION -->
 
     <!-- SECTION 3 -->
-    <section class="section-3">
-      <picture class="section__image">
+    <section class="section-2">
+      <picture class="section__image section__image--2">
         <source 
         srcset="./images/illustration-laptop-desktop.svg 974w" media="(min-width: 900px)" 
         type="image/svg+xml">
         <img
         class="svg"
         src="./images/illustration-laptop-mobile.svg"
+        alt=""
         />
       </picture>
-      <article class="section__info section-center">
+      <article class="section__info section__info--2">
         <div class="section__info__text">
           <h3>Free, open, simple</h3>
           <p>
@@ -223,64 +226,68 @@
           </p>
         </div>
       </article>
+    </section>
     <!--END OF SECTION 2 -->
 
     <!-- FOOTER -->
     <footer>
-      <div class="footer section-center">
+      <div class="footer">
         <div class="img-wrapper">
-          <img src="./images/logo.svg" alt="blogr" />
+          <img src="./images/logo.svg" alt="blogr logo" />
         </div>
-          <!-- footer list -->
-          <ul class="footer__list">
-            <p>Product</p>
-            <li class="footer__item">
-              <a class="footer__link" href="">Overview</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Pricing</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Marketplace</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Features</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">integrations</a>
-            </li>
-          </ul>
-          <!-- end of footer list -->
-          <!-- footer list -->
-          <ul class="footer__list">
-            <p>Company</p>
-            <li class="footer__item">
-              <a class="footer__link" href="">About</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Team</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Blog</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Careers</a>
-            </li>
-          </ul>
-          <!-- end of footer list -->
-          <!-- footer list -->
-          <ul class="footer__list">
-            <p>Connect</p>
-            <li class="footer__item">
-              <a class="footer__link" href="">Contact</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">Newsletter</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="">LinkedIn</a>
-            </li>
-          </ul>
+        <div class="footer__list">
+            <!-- footer item -->
+            <ul class="footer__item">
+              <p>Product</p>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Overview</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Pricing</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Marketplace</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Features</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">integrations</a>
+              </li>
+            </ul>
+            <!-- end of footer item -->
+            <!-- footer item -->
+            <ul class="footer__item">
+              <p>Company</p>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">About</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Team</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Blog</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Careers</a>
+              </li>
+            </ul>
+            <!-- end of footer item -->
+            <!-- footer item -->
+            <ul class="footer__item">
+              <p>Connect</p>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Contact</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">Newsletter</a>
+              </li>
+              <li class="footer__item__subitem">
+                <a class="footer__link" href="">LinkedIn</a>
+              </li>
+            </ul>
+            <!-- end of footer item -->
+          </div>
       </div>
     </footer>
 

@@ -128,7 +128,7 @@ p {
 }
 
 .btn:focus-visible {
-  outline: 1px solid #000;
+  outline: 5px solid #000;
 }
 
 /* // ------------------- // */
@@ -204,6 +204,7 @@ nav {
 
 .nav__item button:hover {
   text-decoration: underline;
+  text-decoration-thickness: 5px;
 }
 
 .nav__item > button::after {
@@ -338,10 +339,28 @@ nav {
   margin-top: 3em;
 }
 
+.section-1,
+.section-2 {
+  position: relative;
+  overflow: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section__info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section--stripe__info {
+  width: 100%;
+}
 /*  */
 
 .section--stripe {
   position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
   margin-top: 17em;
 }
 
@@ -414,9 +433,10 @@ footer {
 }
 
 .footer {
-  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
   padding: 3.8em 0;
 }
 
@@ -424,27 +444,32 @@ footer {
   margin-bottom: 4em;
 }
 
-.footer__list {
+.footer__item {
+  text-align: center;
   color: var(--clr-n-white);
 }
 
-.footer__list + .footer__list {
+.footer__link:hover {
+  color: var(--clr-n-white);
+}
+
+.footer__item + .footer__item {
   margin-top: 2em;
 }
 
-.footer__list p {
+.footer__item p {
   font-weight: 700;
   color: var(--clr-n-white);
   margin: 0 auto;
 }
 
 /* first li item (ignores <p>) */
-.footer__list li:nth-child(2) {
+.footer__item li:nth-child(2) {
   margin-top: 1em;
 }
 
-.footer__item + .footer__item {
-  margin-top: 0.6em;
+.footer__item__subitem + .footer__item__subitem {
+  margin-top: 0.7em;
 }
 
 .footer__link {
@@ -454,6 +479,8 @@ footer {
 
 /* ================================== */
 
+/* Minor changes */
+/* Mainly on fonts */
 @media screen and (min-width: 450px) {
   .hero__info {
     max-width: 70%;
@@ -490,6 +517,8 @@ footer {
   }
 }
 
+/* Repositioning the stripe bg */
+/* Other minor changes */
 @media screen and (min-width: 600px) {
   .section-1 h4 {
     font-size: 2.5rem;
@@ -514,11 +543,16 @@ footer {
   .stripe__svg-bg {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -105%);
+    transform: translate(-50%, -95%);
+  }
+
+  .stripe__svg-bg img {
+    max-width: 3000px;
+    width: 80%;
   }
 }
 
-/* TRANSITION BETWEEN  MENU-NAV AND PORTRAIT-NAV */
+/* Transitioning from menu-nav to desktop-like-nav */
 @media screen and (min-width: 768px) {
   .hamburguer {
     display: none;
@@ -624,18 +658,24 @@ footer {
     transition: 0.3s ease;
   }
 
+  .text-above-section {
+    margin: 1em 0 1em 0;
+    font-size: 3rem;
+  }
+
   /* FOOTER */
 
   .footer {
-    padding-left: 5%;
-    text-align: left;
     flex-direction: row;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1440px;
     margin: 0 auto;
   }
 
   /* reset margins */
   .img-wrapper,
-  .footer__list {
+  .footer__item {
     margin: 0;
   }
 
@@ -643,13 +683,29 @@ footer {
     margin-right: 3em;
   }
 
-  .footer__list + .footer__list {
+  .footer__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .footer__item {
+    text-align: left;
+  }
+
+  .footer__item + .footer__item {
     margin: 0;
-    margin-left: 2em;
+    margin-left: 10%;
   }
 }
 
 @media screen and (min-width: 900px) {
+  .nav__right-items {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
   .hero {
     padding: 12em 0;
     min-height: auto;
@@ -659,35 +715,173 @@ footer {
     margin-bottom: -4em;
   }
 
-  .section-1 {
-    position: relative;
-    overflow: hidden;
-    margin-left: 6em;
+  .text-above-section {
+    margin: 2em 0 -1em 0;
   }
 
-  .section__image {
-    margin-left: 10em;
+  .section-1,
+  .section-2 {
+    padding: 9em 0;
   }
 
+  .section__image--1 img,
+  .section__image--2 img {
+    max-width: 3000px;
+    width: 40rem;
+    height: 100%;
+  }
+
+  .section__info--1,
+  .section__info--2 {
+    width: 80%;
+  }
+
+  /* repositions the new svg */
   .section__image--1 {
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(0%, -50%);
-    margin: 0;
-  }
-
-  .section__image img {
-    width: 150%;
-  }
-
-  .section__info--1 {
     width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(22%, -50%);
     margin: 0;
+  }
+
+  /* padding to distanciate a little from the svg */
+  .section__info--1 {
+    padding-right: 5%;
+  }
+
+  .section--stripe {
+    margin: 8em auto;
+  }
+
+  .section--stripe__info {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-top: 1rem;
+  }
+
+  .section--stripe__phones-svg {
+    transform: translate(-25%, 10%);
+  }
+
+  .section--stripe__phones-svg img {
+    max-width: 3000px;
+    width: 30rem;
+  }
+
+  .section--stripe__info__text {
+    text-align: left;
+    margin-left: 50%;
+  }
+
+  .section--stripe__info__text {
+    align-items: initial;
+    max-width: 50%;
+  }
+
+  .stripe__svg-bg {
+    top: 50%;
+    left: 10%;
+    transform: translate(-35%, -75%);
+  }
+
+  .section__image--2 {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(-22%, -50%);
+    margin: 0;
+  }
+
+  .section__info--2 {
+    margin-left: 50%;
+    margin-right: 10%;
+  }
+
+  .section__info__text {
+    max-width: 50%;
   }
 }
 
-/*  */
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-left: 4em;
+  }
+
+  .nav__item > button {
+    font-size: 1.7rem;
+  }
+
+  .btn--login,
+  .btn--sign-up {
+    font-size: 1.4rem;
+  }
+
+  .nav__left-items > li + li {
+    margin-left: 3em;
+  }
+
+  .logo {
+    max-width: 600px;
+    width: 180px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-top: 1em;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero__btns a {
+    font-size: 2rem;
+  }
+
+  .text-above-section {
+    font-size: 3.5rem;
+  }
+
+  .section__info__text h3 {
+    font-size: 2rem;
+  }
+
+  .section__info__text p {
+    font-size: 1.3rem;
+  }
+
+  .section__image--1 img,
+  .section__image--2 img {
+    width: 54rem;
+  }
+
+  .section__info--1 {
+    padding: 0;
+  }
+
+  .section__info--2 {
+    width: 100%;
+    margin-left: 45%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section__info--1 {
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .section__info--1,
+  .section__info--2 {
+    width: 100%;
+  }
+}
+
+/* JS CLASSES */
 .show-dropdown {
   display: block;
 }
