@@ -6,13 +6,23 @@
   box-sizing: border-box;
 }
 
-/* TABLE OF CONTENT     */
-/* -------------------  */
-/* 1. VARIABLES         */
-/* 1.1 Colors           */
-/* 1.2 Fonts families   */
-/* 2. GENERAL STYLING   */
-/* 3. AUXILIARY CLASSES */
+/* ====================== */
+/*    TABLE OF CONTENT    */
+/* ---------------------- */
+/* 1. VARIABLES           */
+/* 1.1 Colors             */
+/* 1.2 Font families      */
+/* 2. GENERAL STYLING     */
+/* 3. AUXILIARY CLASSES   */
+/* 4. STYLING             */
+/* 4.1 Mobile-first       */
+/* 4.2 Breakpoint: 450px  */
+/* 4.3 Breakpoint: 768px  */
+/* 4.4 Breakpoint: 900px  */
+/* 4.5 Breakpoint: 1200px */
+/* 4.6 Breakpoint: 1440px */
+/* 5. JAVASCRIPT CLASSES  */
+/* ====================== */
 
 :root {
   /* // 1. VARIABLES // */
@@ -146,13 +156,15 @@ p {
 
 /* // ------------------- // */
 
-/*  */
+/* // 4. STYLING // */
 
-.test {
+/* / 4.1 Mobile-first / */
+
+.header {
   z-index: 1000;
 }
 
-.header {
+.logo-wrapper {
   position: absolute;
   top: 7vh;
   left: 5%;
@@ -270,7 +282,7 @@ nav {
   min-height: 100vh;
   align-items: center;
   overflow: hidden;
-  /* padding to centralize based on the .header positioning */
+  /* padding to centralize based on the .logo-wrapper positioning */
   padding-top: 7vh;
   border-bottom-left-radius: 100px;
   background: linear-gradient(155deg, var(--gradient-org-to-red));
@@ -441,7 +453,7 @@ nav {
   height: auto;
 }
 
-/*  */
+/* FOOTER */
 
 footer {
   border-top-right-radius: 90px;
@@ -494,7 +506,9 @@ footer {
   color: var(--clr-n-lgest-grey);
 }
 
-/* ================================== */
+/* / ------------- / */
+
+/* / 4.2 Breakpoint: 450px / */
 
 /* Minor changes */
 /* Mainly on fonts */
@@ -569,13 +583,17 @@ footer {
   }
 }
 
+/* / ------------- / */
+
+/* / 4.3 Breakpoint: 768px / */
+
 /* Transitioning from menu-nav to desktop-like-nav */
 @media screen and (min-width: 768px) {
   .hamburguer {
     display: none;
   }
 
-  .test {
+  .header {
     position: absolute;
     display: flex;
     top: 6vh;
@@ -586,18 +604,18 @@ footer {
     max-width: 1140px;
   }
 
-  .test > * + * {
+  .header > * + * {
     margin-left: 2em;
   }
 
   nav,
-  .header {
+  .logo-wrapper {
     position: relative;
     top: 0;
     left: 0;
   }
 
-  .header {
+  .logo-wrapper {
     align-items: center;
     display: flex;
     width: auto;
@@ -724,6 +742,10 @@ footer {
   }
 }
 
+/* / ------------- / */
+
+/* / 4.4 Breakpoint: 900px / */
+
 @media screen and (min-width: 900px) {
   .nav__right-items {
     display: flex;
@@ -844,6 +866,10 @@ footer {
   }
 }
 
+/* / ------------- / */
+
+/* / 4.5 Breakpoint: 1200px / */
+
 @media screen and (min-width: 1200px) {
   .nav {
     margin-left: 4em;
@@ -908,6 +934,10 @@ footer {
   }
 }
 
+/* / ------------- / */
+
+/* / 4.6 Breakpoint: 1440px / */
+
 @media screen and (min-width: 1440px) {
   .section__info--1 {
     padding-right: 0;
@@ -920,7 +950,9 @@ footer {
   }
 }
 
-/* JS CLASSES */
+/* // ------------------- //*/
+
+/* // 5. JAVASCRIPT CLASSES  // */
 .show-dropdown {
   display: block;
 }
@@ -928,3 +960,5 @@ footer {
 .showMenu {
   display: flex;
 }
+
+/* // ------------------- //*/

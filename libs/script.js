@@ -25,7 +25,6 @@ function toggleMenu() {
 
 //
 //// SUBMENUS
-
 const getSiblings = function (e) {
   // for collecting siblings
   let siblings = [];
